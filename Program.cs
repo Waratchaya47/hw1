@@ -2,13 +2,13 @@
 namespace hw {
     class program {
         static void Main(string[] args) {
-            Console.WriteLine("Input Password (6 number): ");
+            Console.Write("Input Password (6 number): ");
             int p = int.Parse(Console.ReadLine());
 
             int money = 0;
             
             if (p > 100000 && p < 1000000) {
-                Console.WriteLine("Input your affiliation: ");
+                Console.Write("Input your affiliation: ");
                   string a = Console.ReadLine();
                      switch(a) {
                         case "CIA": 
@@ -19,6 +19,9 @@ namespace hw {
                           break;
                         case "NSA":
                           money = 30;
+                          break;
+                        default :
+                          Console.WriteLine("False");
                           break;
                      }
 
