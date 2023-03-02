@@ -38,9 +38,9 @@ namespace hw {
                           Console.WriteLine(p6);
                           break;
                         case "NSA":
-                          while(p<100){
-                            p = p - n;
-                            n = p / 10;
+                          while(p > 100){
+                            p = p - (n * 100);
+                            n = p / 1000;
                           }
                           Console.WriteLine((int)p);
                           break;
