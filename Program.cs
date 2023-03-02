@@ -15,7 +15,6 @@ namespace hw {
                   int p3 = 0;
                   int p2 = 0;
                   int p1 = 0;
-                  int n = 0;
                   
                      switch(a) {
                         case "CIA": 
@@ -47,13 +46,18 @@ namespace hw {
                             } else if (p2 == 5){
                               Console.WriteLine("False");
                             } else { 
-                              Console.WriteLine(p2);
-                            }
-                              
-                          }
-
-                          
+                              int x6c3 = (int)pass / 100000;
+                              p6 = pass - (x6c3 * 100000);
+                              int x5c3 = (int)p6 / 10000;
+                              p5 = p6 - (x5c3 * 10000);
+                              int x4c3 = (int)p5 / 1000;
+                              p4 = (int)x4c3;
+                              if(p4 >= 6 && p4 != 8) {
+                                Console.WriteLine("True"); }   
+                           }
+                          } Console.WriteLine("False");
                           break;
+                        
                         case "FBI":
                           int x6f = (int)pass / 100000;
                           p6 = (int)x6f;
@@ -81,15 +85,31 @@ namespace hw {
                             } else{
                             Console.WriteLine("False"); }
                           break;
+                        
                         case "NSA":
-                          while(pass > 100){
-                            pass = pass - (n * 100);
-                            n = pass / 100;
+                          int x6n = (int)pass / 100000;
+                          p6 = pass - (x6n * 100000);
+                          int x5n = (int)p6 / 10000;
+                          p5 = p6 - (x5n * 10000);
+                          int x4n = (int)p5 / 1000;
+                          p4 = p5 - (x4n * 1000);
+                          int x3n = (int)p4 / 100;
+                          p3 = p4 - (x3n * 100);
+                          int x2n = (int)p3 / 10;
+                          p2 = p3 - (x2n * 10);
+                          if(30 % p2 == 0) {
+                            p6 = pass - (x6n * 100000);
+                            int x5n1 = (int)p6 / 10000;
+                            p5 = p6 - (x5n1 * 10000);
+                            int x4n1 = (int)p5 / 1000;
+                            p4 = p5 - (x4n1 * 1000);
+                            int x3n1 = (int)p4 / 100;
+                            p3 = (int)x3n1;
+                            if(p3 % 3 == 0 && p3 % 2 != 0) {
+                                Console.WriteLine(p3);
+                              
+                            }
                           }
-                          Console.WriteLine((int)pass);
-                          int x2n = (int)pass / 10;
-                          p2 = (int)x2n;
-                          Console.WriteLine(p2);
                           break;
                         default :
                           Console.WriteLine("False");
