@@ -4,8 +4,7 @@ namespace hw {
         static void Main(string[] args) {
             Console.Write("Input Password (6 number): ");
             int pass = int.Parse(Console.ReadLine());
-
-            
+           
             if (pass > 100000 && pass < 1000000) {
                 Console.Write("Input your affiliation: ");
                   string a = Console.ReadLine();
@@ -106,16 +105,21 @@ namespace hw {
                             int x3n1 = (int)p4 / 100;
                             p3 = (int)x3n1;
                             if(p3 % 3 == 0 && p3 % 2 != 0) {
-                                Console.WriteLine(p3);
-                              
-                            }
-                          }
+                              p3 = p4 - (x3n1 * 100);
+                              int x2n1 = (int)p3 /10;
+                              if(x6n == 7 || x5n1 == 7 || x4n1 == 7 || x3n1 == 7 || p2 ==7 || x2n1 == 7){
+                                Console.WriteLine("True");
+                              } else {
+                                Console.WriteLine("False"); }
+                            } else {
+                              Console.WriteLine("False"); }
+                          } else {
+                            Console.WriteLine("False"); }
                           break;
                         default :
                           Console.WriteLine("False");
                           break;
                      }
-
             } else {
                 Console.WriteLine("False");
             }
