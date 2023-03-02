@@ -40,9 +40,16 @@ namespace hw {
                             p3 = p4 - (x3c2 * 100);
                             int x2c2 = (int)p3 / 10;
                             p2 = (int)x2c2;
-                            if(p2 == 0) {
-                              
+                            if(p2 == 1) {
+                              Console.WriteLine("False"); 
+                            } else if (p2 == 3){
+                              Console.WriteLine("False");
+                            } else if (p2 == 5){
+                              Console.WriteLine("False");
+                            } else { 
+                              Console.WriteLine(p2);
                             }
+                              
                           }
 
                           
