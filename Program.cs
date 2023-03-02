@@ -37,12 +37,16 @@ namespace hw {
                                 p6 = pass - (x6f * 100000);
                                 int x5f3 = (int)p6 / 10000;
                                 p5 = (int)x5f3;
-                                Console.Write(p5);
-                              }
-                            }
-
-                            }
-                          
+                                if(p5 % 2 != 0){
+                                  Console.WriteLine("True");
+                                }else {
+                                  Console.WriteLine("False"); }
+                              } else { 
+                                Console.WriteLine("False"); }
+                            } else{
+                              Console.WriteLine("False"); }
+                            } else{
+                            Console.WriteLine("False"); }
                           break;
                         case "NSA":
                           while(pass > 100){
