@@ -16,26 +16,33 @@ namespace hw {
                   int p3 = 0;
                   int p2 = 0;
                   int p1 = 0;
+                  int n = 0;
                   
                      switch(a) {
                         case "CIA": 
                           int x6c = (int)p / 100000;
                           p6 = p - (x6c * 100000);
                           Console.WriteLine(p6);
-                          int x5 = (int)p6 / 10000;
-                          p5 = p6 - (x5 * 10000);
-                          int x4 = (int)p5 / 10000;
-                          p5 = p5 - (x4 * 10000);
-                          int x3 = (int)p4 / 10000;
-                          p5 = p4 - (x3 * 10000);
+                          int x5c = (int)p6 / 10000;
+                          p5 = p6 - (x5c * 10000);
+                          int x4c = (int)p5 / 1000;
+                          p4 = p5 - (x4c * 1000);
+                          int x3c = (int)p4 / 100;
+                          p3 = p4 - (x3c * 100);
+                          Console.WriteLine(p5);
                           break;
                         case "FBI":
                           int x6f = (int)p / 100000;
                           p6 = (int)x6f;
+                          int x2f = (int)p / 10;
                           Console.WriteLine(p6);
                           break;
                         case "NSA":
-                          money = 30;
+                          while(p<100){
+                            p = p - n;
+                            n = p / 10;
+                          }
+                          Console.WriteLine((int)p);
                           break;
                         default :
                           Console.WriteLine("False");
