@@ -5,7 +5,6 @@ namespace hw {
             Console.Write("Input Password (6 number): ");
             int p = int.Parse(Console.ReadLine());
 
-            int money = 0;
             
             if (p > 100000 && p < 1000000) {
                 Console.Write("Input your affiliation: ");
@@ -14,8 +13,6 @@ namespace hw {
                   int p5 = 0;
                   int p4 = 0;
                   int p3 = 0;
-                  int p2 = 0;
-                  int p1 = 0;
                   int n = 0;
                   
                      switch(a) {
@@ -39,8 +36,8 @@ namespace hw {
                           break;
                         case "NSA":
                           while(p > 100){
-                            p = p - (n * 100);
-                            n = p / 1000;
+                            p = p - (n * 10);
+                            n = p / 10;
                           }
                           Console.WriteLine((int)p);
                           break;
