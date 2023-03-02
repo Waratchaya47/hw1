@@ -10,6 +10,9 @@ namespace hw {
                 Console.Write("Input your affiliation: ");
                   string a = Console.ReadLine();
                   int p6 = 0;
+                  int p5 = 0;
+                  int p4 = 0;
+                  int p3 = 0;
                   int n = 0;
                   int p2 = 0;
                   
@@ -21,10 +24,25 @@ namespace hw {
                         case "FBI":
                           int x6f = (int)p / 100000;
                           p6 = (int)x6f;
-                          int x2f = (int)p / 10;
                           if(p6 > 3 && p6 < 8) {
-                            
-                          }
+                            p = p - (x6f * 100000);
+                            int x5f = (int)p / 10000;
+                            p5 = p - (x5f * 10000);
+                            int x4f = (int)p5 / 1000;
+                            p4 = p5 - (x4f * 1000);
+                            int x3f = (int)p4 / 100;
+                            p3 = (int)x3f;
+                            if(p3 % 2 == 0) {
+                              if(p3 != 6){
+                                p = p - (x6f * 100000);
+                                int x5f3 = (int)p / 10000;
+                                p5 = (int)x5f3;
+                                Console.Write(p5);
+                              }
+                            }
+
+                            }
+                          
                           break;
                         case "NSA":
                           while(p > 100){
