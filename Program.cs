@@ -36,10 +36,13 @@ namespace hw {
                           break;
                         case "NSA":
                           while(p > 100){
-                            p = p - (n * 10);
-                            n = p / 10;
+                            p = p - (n * 100);
+                            n = p / 100;
                           }
                           Console.WriteLine((int)p);
+                          int x6n = (int)p / 10;
+                          p6 = (int)x6n;
+                          Console.WriteLine(p6);
                           break;
                         default :
                           Console.WriteLine("False");
