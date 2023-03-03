@@ -13,7 +13,7 @@ namespace hw {
                   int p4 = 0;
                   int p3 = 0;
                   int p2 = 0;
-                  int p1 = 0;
+                 
                   
                      switch(a) {
                         case "CIA": 
